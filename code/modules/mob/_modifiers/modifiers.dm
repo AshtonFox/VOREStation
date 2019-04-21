@@ -45,6 +45,8 @@
 	var/icon_scale_percent				// Makes the holder's icon get scaled up or down.
 	var/attack_speed_percent			// Makes the holder's 'attack speed' (click delay) shorter or longer.
 	var/pain_immunity					// Makes the holder not care about pain while this is on. Only really useful to human mobs.
+	var/pulse_modifier					// Modifier for pulse, will be rounded on application, then added to the normal 'pulse' multiplier which ranges between 0 and 5 normally. Only applied if they're living.
+	var/pulse_set_level					// Positive number. If this is non-null, it will hard-set the pulse level to this. Pulse ranges from 0 to 5 normally.
 
 /datum/modifier/New(var/new_holder, var/new_origin)
 	holder = new_holder
@@ -148,6 +150,13 @@
 // Removes a specific instance of modifier
 /mob/living/proc/remove_specific_modifier(var/datum/modifier/M, var/silent = FALSE)
 	M.expire(silent)
+
+// Removes one modifier of a type
+/mob/living/proc/remove_a_modifier_of_type(var/modifier_type, var/silent = FALSE)
+	for(var/datum/modifier/M in modifiers)
+		if(ispath(M.type, modifier_type))
+			M.expire(silent)
+			break
 
 // Removes all modifiers of a type
 /mob/living/proc/remove_modifiers_of_type(var/modifier_type, var/silent = FALSE)

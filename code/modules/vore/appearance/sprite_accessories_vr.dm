@@ -504,6 +504,7 @@
 	name = "spider legs"
 	desc = ""
 	icon_state = "spider-legs"
+	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/wing/moth
@@ -516,6 +517,12 @@
 	desc = ""
 	icon_state = "moth"
 	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/wing/dragonfly
+	name = "dragonfly"
+	desc = ""
+	icon_state = "dragonfly"
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/wing/citheroniamoth
@@ -601,6 +608,13 @@
 	name = "moth antenna and wings"
 	desc = ""
 	icon_state = "moth_full"
+
+/datum/sprite_accessory/wing/moth_full_gray
+	name = "moth antenna and wings, colorable"
+	desc = ""
+	icon_state = "moth_full_gray"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/wing/kerena
 	name = "wingwolf wings (Kerena)"
@@ -696,6 +710,13 @@
 	name = "stripey taj, brown"
 	desc = ""
 	icon_state = "stripeytail-brown"
+
+/datum/sprite_accessory/tail/chameleon
+	name = "Chameleon, colorable"
+	desc = ""
+	icon_state = "chameleon"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/bunny
 	name = "bunny, colorable"
