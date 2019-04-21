@@ -1,3 +1,4 @@
+
 // ### Wooo, inheritance. Basically copying everything I don't need to edit from prometheans, because they mostly work already.
 // ### Any and all of this is open to change for balance or whatever.
 // ###
