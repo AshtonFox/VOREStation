@@ -43,8 +43,8 @@ var/global/list/narsie_list = list()
 /obj/singularity/narsie/large/New()
 	..()
 	if(announce)
-		world << "<font size='15' color='red'><b>[ruppertext(name)] HAS RISEN</b></font>"
-		world << sound('sound/effects/wind/wind_5_1.ogg')
+		world << "<font size='15' color='red'><b>[uppertext(name)] HAS RISEN</b></font>"
+		world << sound('sound/effects/weather/wind/wind_5_1.ogg')
 
 	narsie_spawn_animation()
 
@@ -311,7 +311,7 @@ var/global/list/narsie_list = list()
 		//no living humans, follow a ghost instead.
 
 /obj/singularity/narsie/proc/acquire(const/mob/food)
-	var/capname = ruppertext(name)
+	var/capname = uppertext(name)
 
 	target << "<span class='notice'><b>[capname] HAS LOST INTEREST IN YOU.</b></span>"
 	target = food
