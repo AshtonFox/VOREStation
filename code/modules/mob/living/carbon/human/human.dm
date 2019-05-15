@@ -794,7 +794,7 @@
 				P.attack_log += text("\[[time_stamp()]\] <font color='orange'>was abused by [H.name] ([H.ckey])</font>")
 
 		else if (href_list["interaction"] == "assslap")
-			if(((Adjacent(P) && !istype(P.loc, /obj/structure/closet)) || (H.loc == P.loc)) && isnude_p && hasanus_p && hashands)
+			if(((Adjacent(P) && !istype(P.loc, /obj/structure/closet)) || (H.loc == P.loc)) && hasanus_p && hashands)
 				H.visible_message("<span class='danger'>[H] шлепает [P] по заднице!</span>")
 				if (istype(P.loc, /obj/structure/closet))
 					P.visible_message("<span class='danger'>[H] шлепает [P] по заднице!</span>")
